@@ -1,46 +1,17 @@
-# Getting Started with Create React App
+# NEO•ONE RC1 Demo
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+To setup the environment:
 
-## Available Scripts
+- Make sure you are running NodeJS version 10.16.0 (preferably)
+- Make sure you have C# .NET version 3.1.401 installed
+- Run `yarn install` or `npm install` to install packages
 
-In the project directory, you can run:
+Demo:
 
-### `yarn start`
+- In `neo-one/contracts` there is a sample NEP17 contract called `TestToken` which implements a sample NEP17 token contract. This contract is still missing a few NEP17 standards but this contract is almost completely follows the NEP17 spec and demonstrates that the NEO•ONE compiler and client can now handle complex smart contracts.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- To compile the contract run `yarn neo-one compile`
+- To build the project run `yarn neo-one build`
+- To test the contract run `yarn test` (see `src/__tests__/TestToken.test.ts`)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Running the test at `TestToken.test.ts` will create a local development network, compile the contract, deploy the contract to the dev network, and generate the smart contract APIs for calling the contract's methods in the test. You can see that the test calls various methods on the smart contract, with appropriate parameters, and gets back the values that we expect for those methods. This whole test demonstrates that NEO•ONE is an end-to-end tool for writing, compiling, deploying, testing, and calling a smart contract on N3.
