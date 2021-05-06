@@ -15,3 +15,5 @@ Demo:
 - To test the contract run `yarn test` (see `src/__tests__/TestToken.test.ts`)
 
 Running the test at `TestToken.test.ts` will create a local development network, compile the contract, deploy the contract to the dev network, and generate the smart contract APIs for calling the contract's methods in the test. You can see that the test calls various methods on the smart contract, with appropriate parameters, and gets back the values that we expect for those methods. This whole test demonstrates that NEO•ONE is an end-to-end tool for writing, compiling, deploying, testing, and calling a smart contract on N3.
+
+See our demo video here: https://www.youtube.com/watch?v=BuQy4eDDQ4o
